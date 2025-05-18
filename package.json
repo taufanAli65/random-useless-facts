@@ -4,6 +4,8 @@
   "description": "generating random useless fact",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon api/app.js",
+    "start": "node api/app.js",
     "test": "jest"
   },
   "repository": {
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/taufanAli65/random-useless-facts/issues"
   },
-  "homepage": "https://github.com/taufanAli65/random-useless-facts#readme"
+  "homepage": "https://github.com/taufanAli65/random-useless-facts#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.4.0",
+    "nodemon": "^3.1.10"
+  }
 }
