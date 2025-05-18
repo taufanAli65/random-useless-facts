@@ -1,0 +1,19 @@
+{
+  "name": "random-facts",
+  "version": "1.0.0",
+  "description": "generating random useless fact",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufanAli65/random-useless-facts.git"
+  },
+  "author": "taufanAli65",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taufanAli65/random-useless-facts/issues"
+  },
+  "homepage": "https://github.com/taufanAli65/random-useless-facts#readme"
+}
