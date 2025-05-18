@@ -28,7 +28,7 @@ async function getFactsHandler(req, res) {
 async function getRandomFactHandler(req, res) {
     try {
         const fact = await getRandomFact();
-        res.status(200).json({message: "Here's a Random Useless Fact U Didn't Need to Know", fact: fact})
+        res.status(200).json({message: "Here's a Random Useless Fact U Didn't Need to Know", fact})
     } catch (error) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
     }

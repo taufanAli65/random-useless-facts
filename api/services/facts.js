@@ -10,12 +10,12 @@ async function getFact(factID) {
 
 async function getFacts() {
     const factsSnapshot = await db.collection('facts').get();
-    return factsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    return factsSnapshot.docs.map(doc => ({...doc.data() }));
 }
 
 async function getRandomFact() {
     const factsSnapshot = await db.collection('facts').get();
-    const facts = factsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    const facts = factsSnapshot.docs.map(doc => ({ ...doc.data() }));
     if (facts.length === 0) {
         throw new Error('No facts available');
     }
