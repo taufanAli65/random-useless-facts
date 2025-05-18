@@ -1,0 +1,135 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #22223b;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.emoji {
+    font-size: 2rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.fact-box {
+    background: #fff;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(60, 72, 88, 0.12);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.fact-text {
+    font-size: 1.25rem;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 1rem;
+    min-height: 3.5rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.modern-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(60, 72, 88, 0.10);
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modern-btn:hover, .modern-btn:focus {
+    background: linear-gradient(90deg, #4f46e5 0%, #2563eb 100%);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    .emoji {
+        font-size: 1.1rem;
+        margin-right: 0.2rem;
+    }
+    .fact-box {
+        max-width: 98vw;
+        width: 98vw;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    .fact-text {
+        font-size: 1rem;
+        min-height: 2rem;
+    }
+    .modern-btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+    .center-wrapper {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .center-wrapper {
+        padding: 0.2rem;
+    }
+    .fact-box {
+        padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+        border-radius: 6px;
+        max-width: 100vw;
+        width: 100vw;
+    }
+    .fact-text {
+        font-size: 0.92rem;
+        min-height: 1.2rem;
+    }
+    .modern-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
