@@ -26,6 +26,10 @@ This project is a RESTful API for storing and retrieving random useless facts. I
 │   │   └── facts.js
 │   └── services/
 │       └── facts.js
+├── views/
+│   ├── index.html
+│   ├── main.js
+│   └── style.css
 ├── useless_facts.txt
 ├── random-facts.js
 ├── .env
@@ -95,6 +99,21 @@ You can use `random-facts.js` to upload facts from `useless_facts.txt` to the AP
 ```sh
 node random-facts.js
 ```
+
+## Frontend Views
+
+The `views/` directory contains a simple frontend to display random useless facts fetched from the API.
+
+- `views/index.html`: Main HTML page for the frontend.
+- `views/main.js`: JavaScript to fetch and display random facts.
+- `views/style.css`: Styling for the frontend.
+
+#### Using the Frontend
+
+1. Make sure your API server is running and accessible.
+2. Open `views/index.html` in your browser.
+3. The page will display a random useless fact and a button to fetch another one.
+
 
 ## License
 
