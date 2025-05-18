@@ -10,7 +10,7 @@ async function getFactHandler(req, res) {
     try {
         const factID = req.params.id;
         const fact = await getFact(factID);
-        res.status(200).json({message: "Here's a Useless Fact U Wanted", fact: fact})
+        res.status(200).json({message: "Here's a Useless Fact U Wanted", fact})
     } catch (error) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
     }
@@ -33,6 +33,7 @@ async function getRandomFactHandler(req, res) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
     }
 }
+
 async function addFactHandler(req, res) {
     try {
         const fact = req.body;
@@ -42,6 +43,7 @@ async function addFactHandler(req, res) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
     }
 }
+
 async function updateFactHandler(req, res) {
     try {
         const factID = req.params.id;
@@ -52,6 +54,7 @@ async function updateFactHandler(req, res) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
     }
 }
+
 async function deleteFactHandler(req, res) {
     try {
         const factID = req.params.id;

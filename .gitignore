@@ -3,3 +3,4 @@ node_modules/
 package-lock.json
 api/config/firebase-service-account.json
 random-facts.js
+useless_facts.txt
