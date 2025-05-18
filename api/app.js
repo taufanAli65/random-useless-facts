@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({ origin: '*' })); // allow all origins
+app.use(express.json());
 
 const factsRouter = require('./routes/facts');
 
