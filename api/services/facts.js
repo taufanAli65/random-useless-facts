@@ -14,18 +14,32 @@ async function getFacts() {
 }
 
 async function getRandomFact() {
-    const factsSnapshot = await db.collection('facts').get();
-    const facts = factsSnapshot.docs.map(doc => ({ ...doc.data() }));
-    if (facts.length === 0) {
+    // Generate a random float between 0 and 1
+    const rand = Math.random();
+
+    // Try to find a fact with random >= rand
+    let query = db.collection('facts').where('random', '>=', rand).orderBy('random').limit(1);
+    let snapshot = await query.get();
+
+    // If none found, wrap around and get the smallest
+    if (snapshot.empty) {
+        query = db.collection('facts').orderBy('random').limit(1);
+        snapshot = await query.get();
+    }
+
+    if (snapshot.empty) {
         throw new Error('No facts available');
     }
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    return facts[randomIndex];    
+
+    // Return the first found document
+    const doc = snapshot.docs[0];
+    return { id: doc.id, ...doc.data() };
 }
 
 async function addFact(fact) {
-    const factRef = await db.collection('facts').add(fact);
-    return { id: factRef.id, ...fact };
+    const factWithRandom = { ...fact, random: Math.random() };
+    const factRef = await db.collection('facts').add(factWithRandom);
+    return { id: factRef.id, ...factWithRandom };
 }
 
 async function updateFact(factID, updatedFact) {
